@@ -58,6 +58,15 @@ In Module 02, I learned about ad-hoc polymorphism and how to achieve it through 
 ### Description
 Module 03 introduced inheritance, a fundamental concept in Object-Oriented Programming. I explored how to create a class hierarchy, enabling code reuse and the extension of existing classes. This module laid the groundwork for more advanced OOP techniques, setting the stage for polymorphism and dynamic binding.
 
+### Learnings
+
+#### Inheritance modes:
+  - Public: will take over all public and protected members of base class
+  - Protected: Public and Protected members will become protected
+  - Private: they will both become private members
+
+Private members of the base class are never inherited!
+
 **Repository Link:** [Module 03](./module03)
 
 
