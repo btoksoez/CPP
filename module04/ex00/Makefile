@@ -6,7 +6,7 @@
 #    By: btoksoez <btoksoez@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 11:34:08 by btoksoez          #+#    #+#              #
-#    Updated: 2024/07/26 10:07:28 by btoksoez         ###   ########.fr        #
+#    Updated: 2024/07/27 10:39:03 by btoksoez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = makesound
 CXX = g++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS = $(addprefix obj/, $(SRCS:.cpp=.o))
 OBJDIR = obj
 

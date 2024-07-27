@@ -6,13 +6,13 @@
 /*   By: btoksoez <btoksoez@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 09:19:11 by btoksoez          #+#    #+#             */
-/*   Updated: 2024/07/26 10:14:43 by btoksoez         ###   ########.fr       */
+/*   Updated: 2024/07/27 10:40:29 by btoksoez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int	main()
 {
@@ -54,6 +54,16 @@ int	main()
 	i->makeSound();
 
 
+	std::cout << " \n\n----- Testing WrongCat -----\n";
+	std::cout << "    -- Constructing -- \n";
+
+	const WrongAnimal* w = new WrongCat();
+
+	std::cout << "    -- getType() -- \n";
+	std::cout << w->getType() << std::endl;
+
+	std::cout << "    -- makeSound() -- \n";
+	w->makeSound();
 
 
 
@@ -61,4 +71,5 @@ int	main()
 	delete meta;
 	delete j;
 	delete i;
+	delete w;
 }
