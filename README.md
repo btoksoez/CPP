@@ -8,6 +8,7 @@ Welcome to my C++ repository, where you can explore my journey through the C++ m
 - [Module 01](#module-01)
 - [Module 02](#module-02)
 - [Module 03](#module-03)
+- [Module 04](#module-04)
 
 ## Module 00
 
@@ -68,6 +69,58 @@ Module 03 introduced inheritance, a fundamental concept in Object-Oriented Progr
 Private members of the base class are never inherited!
 
 **Repository Link:** [Module 03](./module03)
+
+## Module 04
+
+**Topics Covered:**
+- Subtype polymorphism
+- Abstract classes
+- Interfaces
+
+### Description
+Module 04 delves into advanced concepts of Object-Oriented Programming (OOP) in C++, focusing on subtype polymorphism, abstract classes, and interfaces. These concepts enable the creation of flexible and reusable code structures. The module builds on the foundations of inheritance and introduces more sophisticated OOP techniques that are crucial for designing robust and scalable applications.
+
+### Learnings
+#### Subtype Polymorphism:
+makeSound() and getType() are const member functions because,
+they are not supposed to change any object or variable.
+makeSound() is virtual, so that it can be overriden by inherited classes,
+and also be used through a pointer of a base class object, so the compiler
+knows which one to call = dynamic binding.
+For the getType function it was not necessary to use virtual,
+because class objects (like type), will be accessed always from the object itself
+(the derived class).
+Allows objects to be treated as instances of their parent class rather than their actual class, using the virtual keyword.
+Enables the use of a single interface to represent different underlying forms (data types).
+
+deep copy vs shallow copy:
+  a shallow copy just copies the pointers, but not the objects that are being pointed to. can lead to invalid memory access. a deep copy will also copy the objects that are being pointed to.
+  example:
+  ```
+  Cat::Cat(const Cat &other) : Animal(other)
+  {
+    this->brain = new Brain(*other.brain);
+    std::cout << this->type << " copy constructor called.\n";
+  }
+  ```
+  this allocated new memory for the brain object, instead of just assigning the pointer of the other.brain to this->brain.
+
+
+#### Abstract Classes:
+Abstract classes cannot be instantiated, only their derived classes can.
+they contain at least one pure virtual function. They only exist to be derived from
+
+Pure virtual function: a virtual function from the (abstract) base class that needs
+to be redefined in the derived classes -> this makes it an abstract class
+
+syntax: virtual void func() const = 0;
+
+Provide a template for derived classes, enforcing a common interface.
+#### Interfaces:
+Pure abstract classes that define a contract for other classes to implement.
+Ensure that derived classes adhere to a specific set of methods.
+
+**Repository Link:** [Module 04](./module04)
 
 
 <p align="center">

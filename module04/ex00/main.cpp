@@ -6,7 +6,7 @@
 /*   By: btoksoez <btoksoez@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 09:19:11 by btoksoez          #+#    #+#             */
-/*   Updated: 2024/07/27 10:40:29 by btoksoez         ###   ########.fr       */
+/*   Updated: 2024/07/27 11:09:10 by btoksoez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	main()
 
 	std::cout << "    -- getType() -- \n";
 	std::cout << j->getType() << std::endl;
+
 
 	std::cout << "    -- makeSound() -- \n";
 	j->makeSound();
