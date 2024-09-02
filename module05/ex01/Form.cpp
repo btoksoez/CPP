@@ -38,6 +38,16 @@ Form& Form::operator=(const Form &other)
 	return (*this);
 }
 
+const char*	Form::GradeTooLowException::what() const throw()
+{
+	return "Grade too low";
+}
+
+const char*	Form::GradeTooHighException::what() const throw()
+{
+	return "Grade too high";
+}
+
 std::string	Form::getName() const
 {
 	return name;

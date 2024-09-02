@@ -34,6 +34,15 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &other)
 	return (*this);
 }
 
+const char*	Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "Grade too low";
+}
+
+const char*	Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "Grade too high";
+}
 int			Bureaucrat::getGrade() const
 {
 	return grade;
