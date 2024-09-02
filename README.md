@@ -123,6 +123,36 @@ Ensure that derived classes adhere to a specific set of methods.
 **Repository Link:** [Module 04](./module04)
 
 
+## Module 05
+
+**Topics Covered:**
+- Repetition and Exceptions
+- Bureaucrat class design
+- Form management and inheritance
+- Exception handling in C++
+- Abstract classes
+
+### Description
+Module 05 explores advanced Object-Oriented Programming (OOP) concepts in C++ with a focus on repetition and exception handling. The module requires students to implement classes that mimic a bureaucratic system, where each class must follow specific rules regarding grade validity, exception throwing, and inheritance. This module is designed to deepen your understanding of C++ exception handling and the design of robust and error-resistant programs.
+
+### Learnings
+#### Custom exceptions
+Need to overwrite the std::exception class; use throw() keyword to say that this function cannot throw an error, in C++11 replaced by 'noexcept'
+```
+// Exception classes
+		class GradeTooHighException : public std::exception {
+			const std::string what() throw() {
+				return "Grade too high";
+			};
+		};
+```
+
+
+
+**Repository Link:** [Module 05](./module05)
+
+
+
 <p align="center">
   <img src="https://img.shields.io/badge/C%2B%2B-98-blue" alt="C++98">
   <img src="https://img.shields.io/badge/42-School-blue" alt="42 School">
