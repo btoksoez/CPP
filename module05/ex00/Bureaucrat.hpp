@@ -11,6 +11,7 @@ class Bureaucrat
 
 	public:
 		Bureaucrat();
+		Bureaucrat(std::string name, int grade);
 		virtual ~Bureaucrat();
 		Bureaucrat(const Bureaucrat& other);
 
@@ -18,19 +19,19 @@ class Bureaucrat
 
 		// Exception classes
 		class GradeTooHighException : public std::exception {
-			const std::string what() throw() {
+			virtual const char* what() const throw() {
 				return "Grade too high";
 			};
 		};
 		class GradeTooLowException : public std::exception {
-			virtual const std::string what() throw() {
+			virtual const char* what() const throw() {
 				return "Grade too low";
 			};
 		};
 
 		// Getters
-		std::string	getName();
-		int			getGrade();
+		std::string	getName() const;
+		int			getGrade() const;
 
 		// Changing grade
 		void		increaseGrade();
